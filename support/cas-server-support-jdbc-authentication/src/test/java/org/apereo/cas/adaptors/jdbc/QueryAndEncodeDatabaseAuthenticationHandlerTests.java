@@ -152,7 +152,6 @@ public class QueryAndEncodeDatabaseAuthenticationHandlerTests {
 
         assertThrows(AccountPasswordMustChangeException.class,
             () -> q.authenticate(CoreAuthenticationTestUtils.getCredentialsWithSameUsernameAndPassword("user20")));
-        throw new AssertionError("Shouldn't get here");
     }
 
     @Test
@@ -161,7 +160,6 @@ public class QueryAndEncodeDatabaseAuthenticationHandlerTests {
             buildSql(), PASSWORD_FIELD_NAME, "salt", null, DISABLED_FIELD_NAME, NUM_ITERATIONS_FIELD_NAME, 0, STATIC_SALT);
 
         assertThrows(AccountDisabledException.class, () -> q.authenticate(CoreAuthenticationTestUtils.getCredentialsWithSameUsernameAndPassword("user21")));
-        throw new AssertionError("Shouldn't get here");
     }
 
     @Test

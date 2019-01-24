@@ -5,7 +5,6 @@ import org.apereo.cas.services.ServicesManager;
 
 import lombok.val;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.webflow.test.MockRequestContext;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,7 +16,6 @@ import static org.mockito.Mockito.*;
  * @author Misagh Moayyed
  * @since 5.3.0
  */
-@SpringBootTest
 public class InterruptSingleSignOnParticipationStrategyTests {
     @Test
     public void verifyStrategyWithoutInterrupt() {
